@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- I, Adonis Mendoza, 000789894 certify that this material is my original work. 
+  No other person's work has been used without due acknowledgement.
+-->
+
+<!-- CHANGELOG:
+Spotify Integration: I mentioned in the project plan that I was going to use the spotify API to insert playlists and songs into my app, However, due to difficuly and time constraint, I decided to step away from using any API and inserted mp3 files in the database instead. I also did not include playlists and instead added a personal library where users can see the songs that they have added from the main page. Therefore, instead of making an app that interacts with spotify, I made a spotify clone where users can insert songs to library and delete songs from library.
+
+Database Tables: I created 3 more tables than I mentioned such as songs, genre and artists and I did not include a spotify table. Instead, I created a userlibrary table that interacts with the songs table and user table.
+
+Jquery Fade out Post: In the Jquery integration plan, I mentioned that I was going to implement an "X" button that will allow users to click to delete a post such as a song or playlist. However, I decided to implement a heart icon that will be used to either insert or delete a song. The fade out animation will remain the same.
+-->
+<html>
+
+<head>
+  <title>Musica</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/login.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/register.js"></script>
+
+</head>
+
+<body>
+  <h1><a href="index.html"><img src="images/musicaLogo.png"></a></h1>
+  <div class="login-page">
+    <div class="form">
+      <form class="register-form" method="POST" id="register-form">
+        <input type="text" placeholder="username" name="username" id="username"  maxlength="15"required/>
+        <input type="password" placeholder="password" name="password" id="password" maxlength="15"required/>
+        <input type="email" placeholder="email address" name="email" id="email" maxlength="50"required/>
+        <input type="submit" id="createbutton" value="Create">
+        <span id="registererrormessage"></span>
+        <p class="message" >Already registered? <a id="link" href="#">Sign In</a></p>
+      </form>
+      <form class="login-form"  method="POST" id="login-form">
+        <input type="text" placeholder="username" id="loginusername"name="loginusername" required/>
+        <input type="password" placeholder="password" id="loginpassword" name="loginpassword"  required/>
+        <input type="submit" id="loginbutton" value="Login">
+        <span id="loginerrormessage"> </span>
+        <p class="message" ">Not registered? <a id="link" href="#">Create an account</a></p>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
